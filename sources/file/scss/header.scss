@@ -1,0 +1,43 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&display=swap');
+
+header{
+  background:#bb7a6f;
+ }
+
+  div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  a{
+   
+  img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  }
+
+  #navbar ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-family: 'Black Han Sans', sans-serif;
+
+    li{
+      list-style: none;
+      padding: 10px;
+     a{
+      text-decoration: none;
+     }
+      
+    }
+  }  
+  
+  li:hover{
+    background: #eb7979;
+  }
+
