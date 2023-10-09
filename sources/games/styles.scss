@@ -1,4 +1,28 @@
  @import '../file/scss/variables.scss';
+ #container_filtro{
+  display:flex ;
+  justify-content: center;
+  margin: 20px 0px;
+ form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #a58080;
+  width: 900px;
+  height: 45px;
+  gap: 20px;
+ button{
+  background: #ed4f4f;
+  padding: 10px;
+  height: 35px;
+  }
+
+ input{
+  padding: 10px;
+  height: 35px;
+ }
+ }
+}
 
 .table-container {
     margin: 20px;
@@ -45,3 +69,4 @@
     background-color: #f2f2f2;
     border-radius: 5px;
   }
+

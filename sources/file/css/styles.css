@@ -10,11 +10,10 @@ body {
 
 header {
   background: #bb7a6f; }
-
-div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 a img {
   width: 60px;
@@ -35,6 +34,26 @@ a img {
 
 li:hover {
   background: #eb7979; }
+
+#container_filtro {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px; }
+  #container_filtro form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a58080;
+    width: 900px;
+    height: 45px;
+    gap: 20px; }
+    #container_filtro form button {
+      background: #ed4f4f;
+      padding: 10px;
+      height: 35px; }
+    #container_filtro form input {
+      padding: 10px;
+      height: 35px; }
 
 .table-container {
   margin: 20px;
