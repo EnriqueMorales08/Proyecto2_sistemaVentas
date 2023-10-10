@@ -81,6 +81,10 @@ li:hover {
     .table-container #data-table tbody tr:hover {
       background-color: #e0e0e0; }
 
+.star-rating {
+  color: gold;
+  font-size: 1.5rem; }
+
 /* Estilos para el mensaje de "No hay casas disponibles" */
 #message-not-found {
   text-align: center;

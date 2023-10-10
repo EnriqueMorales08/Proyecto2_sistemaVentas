@@ -17,8 +17,8 @@ class Videojuego {
   const juego1 = new Videojuego(1,"Juego1.jpg", "StarCraft","Play Station","StarCraft II ofrece la mejor experiencia en juegos de estrategia en tiempo real.",200,"4 estrellas" );
   const juego2 = new Videojuego(2, "Juego2.jpg", "Alla Wake 2","Play Station","videojuego de horror de supervivencia desarrollado por Remedy Entertainment ",300,"5 estrellas");
   const juego3 = new Videojuego(3, "Juego3.jpg", "Alone in the Dark","Xbox","El jugador debe explorar la mansión para encontrar una salida, mientras se enfrenta a enemigos sobrenaturales",200,"3 estrellas");
-  const juego4 = new Videojuego(3, "Juego4.jpg", "Armored Core","Play Station","Los jugadores ensamblarán y pilotarán su propio robot con maniobrabilidad 3D para moverse libremente",400,"4 estrellas");
-  const juego5 = new Videojuego(3, "Juego5.jpg", "Assassins creed","PC","es un videojuego de aventura de acción y de sigilo en la que el jugador sobre todo asume el papel de Altaïr",500,"5 estrellas");
+  const juego4 = new Videojuego(4, "Juego4.jpg", "Armored Core","Play Station","Los jugadores ensamblarán y pilotarán su propio robot con maniobrabilidad 3D para moverse libremente",400,"4 estrellas");
+  const juego5 = new Videojuego(5, "Juego5.jpg", "Assassins creed","PC","es un videojuego de aventura de acción y de sigilo en la que el jugador sobre todo asume el papel de Altaïr",500,"5 estrellas");
   
   // Almacenamos los objetos en un array
   const VideojuegoList = [juego1, juego2, juego3,juego4,juego5];
@@ -58,7 +58,11 @@ class Videojuego {
               <td>${game.plataforma}</td>
               <td>${game.description}</td>
               <td>${game.precio}</td>
-              <td>${game.calificacion}</td>
+              <td>${game.calificacion}
+              <div class="star-rating">
+              ${getStarRatingHtml(game.calificacion)}
+              </div>
+              </td>
             `;
   
             tablaBody.appendChild(row);
@@ -70,7 +74,19 @@ class Videojuego {
     }, 2000);
   
   }
-  
+
+  function getStarRatingHtml(calificacion) {
+    const starCount = parseInt(calificacion);
+    let starsHtml = '';
+    for (let i = 1; i <= 5; i++) {
+      if (i <= starCount) {
+        starsHtml += '<span class="star">&#9733;</span>';
+      } else {
+        starsHtml += '<span class="star">&#9734;</span>';
+      }
+    }
+    return starsHtml;
+  }
   
   function clearTable() {
     const tableBody = document.getElementById('data-table-body');
@@ -91,7 +107,7 @@ class Videojuego {
   function showNotFoundMessage() {
     const messageNotFound = document.getElementById('message-not-found');
   
-    messageNotFound.innerHTML = 'No se encontraron casas con el filtro proporcionado.';
+    messageNotFound.innerHTML = 'No se encontraron juegos con el filtro proporcionado.';
   
     messageNotFound.style.display = 'block';
   }
