@@ -9,7 +9,8 @@ body {
   font-size: 16px; }
 
 header {
-  background: #bb7a6f; }
+  background: #db4227;
+  border-bottom: 2px solid black; }
   header div {
     display: flex;
     justify-content: space-between;
@@ -92,3 +93,135 @@ li:hover {
   padding: 10px;
   background-color: #f2f2f2;
   border-radius: 5px; }
+
+#container_filtro_ventas {
+  display: flex;
+  justify-content: center;
+  background: #ffe4c4;
+  margin: 20px 0px;
+  gap: 20px; }
+  #container_filtro_ventas form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a58080;
+    width: 960px;
+    height: 45px;
+    gap: 20px; }
+    #container_filtro_ventas form button {
+      background: #ed4f4f;
+      padding: 10px;
+      height: 35px; }
+    #container_filtro_ventas form input {
+      padding: 10px;
+      height: 35px; }
+
+#nueva_venta {
+  background: #ed4f4f;
+  padding: 10px; }
+
+.table-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px; }
+  .table-container #data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; }
+    .table-container #data-table th,
+    .table-container #data-table td {
+      border: 1px solid #6f4b4b;
+      padding: 10px;
+      text-align: left; }
+      .table-container #data-table th .delete-button,
+      .table-container #data-table td .delete-button {
+        background: #ed4f4f;
+        width: 100%;
+        padding: 5px;
+        height: auto; }
+      .table-container #data-table th img,
+      .table-container #data-table td img {
+        width: 100px;
+        height: 100px; }
+    .table-container #data-table th {
+      background-color: #ed4f4f; }
+    .table-container #data-table tbody tr:nth-child(even) {
+      background-color: #a58080; }
+    .table-container #data-table tbody tr:hover {
+      background-color: #e0e0e0; }
+
+#formulario-agregar-venta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Fondo semi-transparente */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; }
+  #formulario-agregar-venta #formulario-venta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    background: #a84646;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    /* Ancho del formulario dentro del fondo */
+    max-width: 400px; }
+    #formulario-agregar-venta #formulario-venta h2 {
+      margin-bottom: 20px; }
+  #formulario-agregar-venta input {
+    width: 90%;
+    height: 30px; }
+  #formulario-agregar-venta button {
+    background: #ed4f4f;
+    width: 90%;
+    height: 30px;
+    padding: 5px; }
+
+/* Estilos para el mensaje de "No hay casas disponibles" */
+#message-not-found {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px; }
+
+#banner {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  background: url("/sources/file/img/imagengamer_banner.jpg") no-repeat center center fixed;
+  background-size: cover;
+  align-items: flex-end;
+  color: white;
+  justify-content: flex-end;
+  height: 100vh; }
+
+.div_banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(90deg, #ff0000 0%, #111 35%, #ff6800 100%);
+  opacity: 0.9;
+  padding: 3rem;
+  font-family: sans-serif; }
+
+section > h1 {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #ff0000;
+  border-bottom: 5px solid #ff0000;
+  margin-bottom: 2rem; }

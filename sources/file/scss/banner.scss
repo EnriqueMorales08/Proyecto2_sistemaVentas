@@ -1,0 +1,31 @@
+#banner {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    background: url("/sources/file/img/imagengamer_banner.jpg") no-repeat center center fixed;
+    background-size: cover;
+    align-items: flex-end;
+    color: white;
+    justify-content: flex-end;
+    height: 100vh;
+  }
+  
+  .div_banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(90deg, $color-rojo-oscuro 0%, $color-negro-fondo 35%, $color-naranja 100%);
+    opacity: 0.9;
+    padding: 3rem;
+    font-family: sans-serif;
+  }
+  section > h1 {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $color-rojo-oscuro; 
+    border-bottom: 5px solid $color-rojo-oscuro; 
+    margin-bottom: 2rem;
+  }

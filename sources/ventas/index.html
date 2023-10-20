@@ -25,6 +25,71 @@
 
         </div>       
     </header>
-    <p>ventas</p>
+    <div id="container_filtro_ventas">
+      <form action="">
+        <input type="number" id="Precio" placeholder="Indicar Precio">
+        <input type="text" id="nombre" placeholder="Nombre Juego">
+        <input type="text" id="nombre_vendedor" placeholder="Nombre del Vendedor">
+        <input type="date" id="fecha_venta" placeholder="Fecha de Venta">
+        <button type="button" id="filtrar_ventas">Filtrar</button>
+        <button type="reset" id="restablecer_ventas">Restablecer</button>
+    </form>
+    <button type="button" id="nueva_venta">Agregar nueva venta</button>
+   
+       </div>
+   
+       <div class="table-container">
+   
+           <table id="data-table">
+             <thead>
+               <tr>
+                 <th>N° Venta</th>
+                 <th>Cliente</th>
+                 <th>Telefono</th>
+                 <th>Juego</th>
+                 <th>Vendedor</th>
+                 <th>Fecha de venta</th>
+                 <th>Precio Venta</th>
+                 <th>Eliminar</th>
+               </tr>
+             </thead>
+             <tbody id="data-table-body">
+               <!-- Aquí se generará la tabla dinámicamente -->
+             </tbody>
+           </table>
+         </div>
+         
+         <div id="formulario-agregar-venta" >
+          <h2>Nueva Venta</h2>
+          <form id="formulario-venta">
+            <label for="cliente">Cliente:</label>
+            <input type="text" id="cliente" required>
+        
+            <label for="telefono">Teléfono del Cliente:</label>
+            <input type="tel" id="telefono" required>
+        
+            <label for="juego">Juego:</label>
+            <input type="text" id="juego" required>
+        
+            <label for="vendedor">Vendedor:</label>
+            <input type="text" id="vendedor" required>
+        
+            <label for="fecha-venta">Fecha de Venta:</label>
+            <input type="date" id="fecha-venta" required>
+        
+            <label for="precio-venta">Precio de Venta:</label>
+            <input type="number" id="precio-venta" required>
+        
+            <button type="button" id="guardar-venta">Guardar Venta</button>
+            <button type="button" id="cancelar-venta">Cancelar</button>
+          </form>
+        </div>
+         <div id="message-not-found">
+           <p>No hay Juegos disponibles en este momento.</p>
+         </div>
+     
+       </main>
+       <script src="script.js"></script>
+
 </body>
 </html>
